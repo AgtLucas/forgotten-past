@@ -2,3 +2,18 @@
   font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --bgColour: #F3F3F3;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+td {
+  width: 300px;
+}
