@@ -24,11 +24,14 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
-    "react-app-rewire-postcss": "^3.0.2"
+    "react-app-rewire-postcss": "^3.0.2",
+    "react-test-renderer": "^16.8.6"
   }
 }
