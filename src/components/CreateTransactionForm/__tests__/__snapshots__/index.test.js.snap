@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateTransactionForm should render CreateTransactionForm 1`] = `
+<form
+  method="post"
+  onSubmit={[MockFunction]}
+>
+  <label>
+    Descrição
+    <input
+      name="description"
+      onChange={[MockFunction]}
+      type="text"
+      value="Foo"
+    />
+  </label>
+  <label>
+    Valor
+    <input
+      min="0"
+      name="price"
+      onChange={[MockFunction]}
+      type="number"
+      value={100}
+    />
+  </label>
+  <label>
+    Crédito
+    <input
+      name="type"
+      onChange={[MockFunction]}
+      type="radio"
+      value="credit"
+    />
+  </label>
+  <label>
+    Débito
+    <input
+      name="type"
+      onChange={[MockFunction]}
+      type="radio"
+      value="debit"
+    />
+  </label>
+  <button
+    type="submit"
+  >
+    Adicionar transação
+  </button>
+</form>
+`;

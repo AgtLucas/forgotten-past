@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionsTable should render TransactionsTable 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th>
+        Descrição
+      </th>
+      <th>
+        Preço
+      </th>
+      <th>
+        Tipo de transação
+      </th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th
+        colSpan={3}
+      >
+        Total: R$ 
+      </th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr
+      key="0"
+    >
+      <td>
+        Foo
+      </td>
+      <td>
+        100
+      </td>
+      <td>
+        credit
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
