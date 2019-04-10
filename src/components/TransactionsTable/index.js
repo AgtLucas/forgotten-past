@@ -1,5 +1,10 @@
 import React from 'react';
 
+const TRANSACTION_TYPE = {
+  'credit': 'Crédito',
+  'debit': 'Débito',
+};
+
 const TransactionsTable = ({ transactions, getTransactionsTotalPrice }) => {
   if (!transactions || !transactions.length) return <p>Você não cadastrou nenhuma transação</p>;
 
@@ -22,7 +27,7 @@ const TransactionsTable = ({ transactions, getTransactionsTotalPrice }) => {
         <tr key={i}>
           <td>{transaction.description}</td>
           <td>{transaction.price}</td>
-          <td>{transaction.type}</td>
+          <td>{TRANSACTION_TYPE[transaction.transactionType]}</td>
         </tr>
       )).reverse()}
       </tbody>
