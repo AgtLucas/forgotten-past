@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CreateTransactionForm from './components/CreateTransactionForm';
 import TransactionsTable from './components/TransactionsTable';
 
@@ -21,7 +21,7 @@ const App = () => {
   };
 
   return (
-    <Fragment>
+    <main>
       <CreateTransactionForm
         formRef={formElement}
         handleSubmit={handleSubmit}
@@ -30,7 +30,7 @@ const App = () => {
         transactions={transactions}
         getTransactionsTotalPrice={getTransactionsTotalPrice}
       />
-    </Fragment>
+    </main>
   );
 };
 

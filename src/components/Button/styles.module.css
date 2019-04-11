@@ -1,0 +1,17 @@
+.btn {
+  border: 0;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.default {
+  composes: btn;
+  background-color: var(--blue);
+  color: var(--white);
+}

@@ -17,5 +17,5 @@ describe('CreateTransactionForm', () => {
 
     const wrapper = shallow(<CreateTransactionForm {...props} />);
     expect(toJSON(wrapper)).toMatchSnapshot();
-  })
+  });
 });

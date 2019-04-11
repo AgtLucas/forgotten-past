@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage should render ErrorMessage 1`] = `
+<span
+  aria-live="polite"
+  className="error"
+>
+  Error
+</span>
+`;

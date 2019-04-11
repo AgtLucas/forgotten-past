@@ -34,9 +34,7 @@ exports[`TransactionsTable should render TransactionsTable 1`] = `
       <td>
         100
       </td>
-      <td>
-        credit
-      </td>
+      <td />
     </tr>
   </tbody>
 </table>

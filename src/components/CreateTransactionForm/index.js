@@ -1,6 +1,9 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import Input from '../Input';
+import Button from '../Button';
+import ErrorMessage from '../ErrorMessage';
 
 const TransactionSchema = Yup.object().shape({
   description: Yup.string()
@@ -35,7 +38,7 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
       <form ref={formRef} method='post' onSubmit={handleSubmit}>
         <label>
           Descrição
-          <input
+          <Input
             type='text'
             name='description'
             value={values.description}
@@ -44,12 +47,12 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
             onBlur={handleBlur}
           />
           {errors.description && touched.description ? (
-            <div>{errors.description}</div>
+            <ErrorMessage>{errors.description}</ErrorMessage>
           ) : null}
         </label>
         <label>
           Valor
-          <input
+          <Input
             min='0'
             type='number'
             name='price'
@@ -59,7 +62,7 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
             onBlur={handleBlur}
           />
           {errors.price && touched.price ? (
-            <div>{errors.price}</div>
+            <ErrorMessage>{errors.price}</ErrorMessage>
           ) : null}
         </label>
         <label>
@@ -74,10 +77,10 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
             <option value='debit'>Débito</option>
           </select>
           {errors.transactionType && touched.transactionType ? (
-            <div>{errors.transactionType}</div>
+            <ErrorMessage>{errors.transactionType}</ErrorMessage>
           ) : null}
         </label>
-        <button type='submit' disabled={isSubmitting}>Adicionar transação</button>
+        <Button type='submit' disabled={isSubmitting}>Adicionar transação</Button>
       </form>
     )}
   </Formik>

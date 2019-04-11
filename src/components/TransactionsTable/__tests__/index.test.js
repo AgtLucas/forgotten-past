@@ -18,5 +18,5 @@ describe('TransactionsTable', () => {
 
     const wrapper = shallow(<TransactionsTable {...props} />);
     expect(toJSON(wrapper)).toMatchSnapshot();
-  })
+  });
 });
