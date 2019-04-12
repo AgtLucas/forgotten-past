@@ -8,4 +8,14 @@ describe('Button', () => {
     const wrapper = shallow(<Button>Hey</Button>);
     expect(toJSON(wrapper)).toMatchSnapshot();
   });
+
+  it('should render an emoji type button', () => {
+    const wrapper = shallow(
+      <Button variant='emoji'>
+        <span role='img' aria-label='My emoji button'>🤘</span>
+      </Button>
+    );
+
+    expect(toJSON(wrapper)).toMatchSnapshot();
+  })
 });

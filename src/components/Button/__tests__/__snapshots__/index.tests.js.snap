@@ -7,3 +7,16 @@ exports[`Button should render Button 1`] = `
   Hey
 </button>
 `;
+
+exports[`Button should render an emoji type button 1`] = `
+<button
+  className="emoji"
+>
+  <span
+    aria-label="My emoji button"
+    role="img"
+  >
+    🤘
+  </span>
+</button>
+`;
