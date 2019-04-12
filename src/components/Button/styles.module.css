@@ -17,3 +17,9 @@
   background-color: var(--blue);
   color: var(--white);
 }
+
+.emoji {
+  composes: btn;
+  background-color: transparent;
+  height: auto;
+}

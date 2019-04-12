@@ -13,7 +13,8 @@ describe('TransactionsTable', () => {
           type: 'credit'
         },
       ],
-      getTransactionsTotalPrice: jest.fn(() => ''),
+      transactionsTotalPrice: 231,
+      deleteTransactionById: jest.fn(),
     };
 
     const wrapper = shallow(<TransactionsTable {...props} />);

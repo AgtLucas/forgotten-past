@@ -20,9 +20,10 @@ const TransactionSchema = Yup.object().shape({
 
 const CreateTransactionForm = ({ handleSubmit }) => (
   <Formik
-    initialValues={{ description: '', price: '', transactionType: '' }}
+    initialValues={{ id: '', description: '', price: '', transactionType: '' }}
     validationSchema={TransactionSchema}
     onSubmit={(values, { setSubmitting, resetForm }) => {
+      values.id = Math.random();
       handleSubmit(values);
       resetForm();
       setSubmitting(false);
@@ -42,22 +43,6 @@ const CreateTransactionForm = ({ handleSubmit }) => (
         className={styles.form}
         onSubmit={handleSubmit}
       >
-        <label className={styles.label}>
-          Tipo de transação
-          <Select
-            name='transactionType'
-            value={values.transactionType}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          >
-            <option>Escolha o tipo de transação</option>
-            <option value='credit'>Crédito</option>
-            <option value='debit'>Débito</option>
-          </Select>
-          {errors.transactionType && touched.transactionType ? (
-            <ErrorMessage>{errors.transactionType}</ErrorMessage>
-          ) : null}
-        </label>
         <label className={styles.label}>
           Descrição
           <Input
@@ -85,6 +70,22 @@ const CreateTransactionForm = ({ handleSubmit }) => (
           />
           {errors.price && touched.price ? (
             <ErrorMessage>{errors.price}</ErrorMessage>
+          ) : null}
+        </label>
+        <label className={styles.label}>
+          Tipo de transação
+          <Select
+            name='transactionType'
+            value={values.transactionType}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          >
+            <option>Escolha o tipo de transação</option>
+            <option value='credit'>Crédito</option>
+            <option value='debit'>Débito</option>
+          </Select>
+          {errors.transactionType && touched.transactionType ? (
+            <ErrorMessage>{errors.transactionType}</ErrorMessage>
           ) : null}
         </label>
         <Button type='submit' disabled={isSubmitting}>Adicionar transação</Button>

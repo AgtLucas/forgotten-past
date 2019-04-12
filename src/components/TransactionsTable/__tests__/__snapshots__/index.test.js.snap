@@ -15,14 +15,16 @@ exports[`TransactionsTable should render TransactionsTable 1`] = `
       <th>
         Tipo de transação
       </th>
+      <th />
     </tr>
   </thead>
   <tfoot>
     <tr>
       <th
-        colSpan={3}
+        colSpan={4}
       >
-        Total: R$ 
+        Total: 
+        R$2.31
       </th>
     </tr>
   </tfoot>
@@ -34,9 +36,29 @@ exports[`TransactionsTable should render TransactionsTable 1`] = `
         Foo
       </td>
       <td>
-        100
+        R$1.00
       </td>
       <td />
+      <td
+        style={
+          Object {
+            "width": "30px",
+          }
+        }
+      >
+        <Button
+          onClick={[Function]}
+          title="Deletar transação: Foo"
+          variant="emoji"
+        >
+          <span
+            aria-label="Deletar transação: Foo"
+            role="img"
+          >
+            ❌
+          </span>
+        </Button>
+      </td>
     </tr>
   </tbody>
 </table>

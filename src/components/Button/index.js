@@ -12,7 +12,7 @@ const Button = ({ variant = 'default', children, ...rest }) => (
 );
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'emoji']),
   children: PropTypes.node.isRequired,
 };
 
