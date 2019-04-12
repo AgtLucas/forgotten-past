@@ -2,9 +2,18 @@
 
 ![](demo.png)
 
+# Table of contents
+
+* [Introduction](#introduction)
+* [Requirements and how to run locally](#requirements-and-how-to-run-locally)
+* [Tech stack](#tech-stack)
+* [Contributting](#contributting)
+* [Demo](#demo)
+* [LICENSE](#license)
+
 ## Introduction
 
-This is a small pet project to track down monthly transactions that I made bespoke for my parents.
+> This is a small pet project to track down monthly transactions that I made bespoke for my parents.
 
 ## Requirements and how to run locally
 
@@ -24,6 +33,12 @@ To run this project locally, you need Node.js® v10+ and a Web Browser with loca
 - Uses [Formik](https://github.com/jaredpalmer/formik) for a better form experience
 - Uses localStorage to save your transactions
 - [Jest](https://jestjs.io) and [Enzyme](https://airbnb.io/enzyme/) for basic UI tests
+
+## Contributting
+
+Want to contribute to this project? Feel free to [open an issue](https://github.com/AgtLucas/forgotten-past/issues/new) or even better, a pull request! 😀
+
+To submit a PR, follow the steps on the [Requirements and how to run locally section](#requirements-and-how-to-run-locally) then create a new branch like so: `git checkout -b my-new-awesome-feature`, commit and push your changes and then open a new pull request on GitHub.
 
 ## Demo
 
