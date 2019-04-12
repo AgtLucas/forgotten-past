@@ -73,13 +73,13 @@ const CreateTransactionForm = ({ handleSubmit }) => (
           ) : null}
         </label>
         <label className={styles.label}>
-          Valor
+          Valor (apenas números)
           <Input
             min='0'
             type='number'
             name='price'
             value={values.price}
-            placeholder='Ex.: 200'
+            placeholder='Ex.: 606 = R$ 6,06'
             onChange={handleChange}
             onBlur={handleBlur}
           />
