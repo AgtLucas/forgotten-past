@@ -1,9 +1,19 @@
 :root {
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --bgColour: #F3F3F3;
   --blue: #08C;
   --white: #FFF;
   --red: #E62429;
+  --borderRadius: 3px;
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 table {
@@ -15,6 +25,9 @@ th {
   border: 1px solid #999;
   padding: 0.5rem;
   text-align: left;
+  word-wrap: break-word;
+  white-space: normal;
+  hyphens: auto;
 }
 
 td {
@@ -22,5 +35,5 @@ td {
 }
 
 main {
-  padding: 2em calc(50% - 430px);
+  padding: 2em calc(50% - 460px);
 }

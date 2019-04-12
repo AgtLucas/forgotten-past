@@ -1,4 +1,6 @@
 .error {
+  position: relative;
+  display: block;
   font-size: 14px;
   color: var(--red);
 }

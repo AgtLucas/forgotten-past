@@ -4,6 +4,8 @@ import * as Yup from 'yup';
 import Input from '../Input';
 import Button from '../Button';
 import ErrorMessage from '../ErrorMessage';
+import Select from '../Select';
+import styles from './styles.module.css';
 
 const TransactionSchema = Yup.object().shape({
   description: Yup.string()
@@ -16,7 +18,7 @@ const TransactionSchema = Yup.object().shape({
     .required('Por favor, escolha o tipo da transação.')
 });
 
-const CreateTransactionForm = ({ formRef, handleSubmit }) => (
+const CreateTransactionForm = ({ handleSubmit }) => (
   <Formik
     initialValues={{ description: '', price: '', transactionType: '' }}
     validationSchema={TransactionSchema}
@@ -35,8 +37,28 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
       handleSubmit,
       isSubmitting,
     }) => (
-      <form ref={formRef} method='post' onSubmit={handleSubmit}>
-        <label>
+      <form
+        method='post'
+        className={styles.form}
+        onSubmit={handleSubmit}
+      >
+        <label className={styles.label}>
+          Tipo de transação
+          <Select
+            name='transactionType'
+            value={values.transactionType}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          >
+            <option>Escolha o tipo de transação</option>
+            <option value='credit'>Crédito</option>
+            <option value='debit'>Débito</option>
+          </Select>
+          {errors.transactionType && touched.transactionType ? (
+            <ErrorMessage>{errors.transactionType}</ErrorMessage>
+          ) : null}
+        </label>
+        <label className={styles.label}>
           Descrição
           <Input
             type='text'
@@ -50,7 +72,7 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
             <ErrorMessage>{errors.description}</ErrorMessage>
           ) : null}
         </label>
-        <label>
+        <label className={styles.label}>
           Valor
           <Input
             min='0'
@@ -63,21 +85,6 @@ const CreateTransactionForm = ({ formRef, handleSubmit }) => (
           />
           {errors.price && touched.price ? (
             <ErrorMessage>{errors.price}</ErrorMessage>
-          ) : null}
-        </label>
-        <label>
-          <select
-            name='transactionType'
-            value={values.transactionType}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          >
-            <option>Tipo de transação</option>
-            <option value='credit'>Crédito</option>
-            <option value='debit'>Débito</option>
-          </select>
-          {errors.transactionType && touched.transactionType ? (
-            <ErrorMessage>{errors.transactionType}</ErrorMessage>
           ) : null}
         </label>
         <Button type='submit' disabled={isSubmitting}>Adicionar transação</Button>
