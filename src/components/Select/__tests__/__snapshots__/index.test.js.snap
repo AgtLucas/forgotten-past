@@ -3,5 +3,9 @@
 exports[`Select should render Select 1`] = `
 <select
   className="select"
-/>
+>
+  <option>
+    Hi!
+  </option>
+</select>
 `;

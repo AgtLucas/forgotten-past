@@ -5,10 +5,7 @@ import Select from '../';
 
 describe('Select', () => {
   it('should render Select', () => {
-    const props = {
-    };
-
-    const wrapper = shallow(<Select {...props} />);
+    const wrapper = shallow(<Select><option>Hi!</option></Select>);
     expect(toJSON(wrapper)).toMatchSnapshot();
   });
 });

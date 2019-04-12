@@ -8,7 +8,9 @@ const TRANSACTION_TYPE = {
 
 const TransactionsTable = ({ transactions, getTransactionsTotalPrice }) => {
   if (!transactions || !transactions.length) return (
-    <p className={styles.disclaimer}>Você não cadastrou nenhuma transação</p>
+    <p className={styles.disclaimer}>
+      Você ainda não cadastrou nenhuma transação
+    </p>
   );
 
   return (

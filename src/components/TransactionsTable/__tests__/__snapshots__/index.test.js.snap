@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TransactionsTable should render TransactionsTable 1`] = `
-<table>
+<table
+  className="table"
+>
   <thead>
     <tr>
       <th>

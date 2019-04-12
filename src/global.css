@@ -1,11 +1,13 @@
 :root {
-  --bgColour: #F3F3F3;
-  --blue: #08C;
+  --blue: #004365;
   --white: #FFF;
   --red: #E62429;
+  --bgColour: #f9f9fa;
   --borderRadius: 3px;
   font-family: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
+  background-color: var(--bgColour);
+  color: var(--blue);
 }
 
 html {
@@ -22,7 +24,7 @@ table {
 
 td,
 th {
-  border: 1px solid #999;
+  border: 1px solid var(--blue);
   padding: 0.5rem;
   text-align: left;
   word-wrap: break-word;
@@ -32,6 +34,7 @@ th {
 
 td {
   width: 300px;
+  max-width: 100%;
 }
 
 main {
