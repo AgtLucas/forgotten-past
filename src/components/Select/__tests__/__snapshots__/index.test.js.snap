@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render Select 1`] = `
+<select
+  className="select"
+>
+  <option>
+    Hi!
+  </option>
+</select>
+`;

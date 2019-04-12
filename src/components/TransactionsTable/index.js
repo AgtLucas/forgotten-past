@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './styles.module.css';
 
 const TRANSACTION_TYPE = {
   'credit': 'Crédito',
@@ -6,10 +7,14 @@ const TRANSACTION_TYPE = {
 };
 
 const TransactionsTable = ({ transactions, getTransactionsTotalPrice }) => {
-  if (!transactions || !transactions.length) return <p>Você não cadastrou nenhuma transação</p>;
+  if (!transactions || !transactions.length) return (
+    <p className={styles.disclaimer}>
+      Você ainda não cadastrou nenhuma transação
+    </p>
+  );
 
   return (
-    <table>
+    <table className={styles.table}>
       <thead>
       <tr>
         <th>Descrição</th>

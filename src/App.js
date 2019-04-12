@@ -1,11 +1,10 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import CreateTransactionForm from './components/CreateTransactionForm';
 import TransactionsTable from './components/TransactionsTable';
 
 const App = () => {
   const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
   const [transactions, setTransactions] = useState(localStorageTransactions || []);
-  const formElement = useRef(null);
 
   useEffect(() => {
     localStorage.setItem('transactions', JSON.stringify(transactions));
@@ -21,16 +20,13 @@ const App = () => {
   };
 
   return (
-    <Fragment>
-      <CreateTransactionForm
-        formRef={formElement}
-        handleSubmit={handleSubmit}
-      />
+    <main>
+      <CreateTransactionForm handleSubmit={handleSubmit} />
       <TransactionsTable
         transactions={transactions}
         getTransactionsTotalPrice={getTransactionsTotalPrice}
       />
-    </Fragment>
+    </main>
   );
 };
 
