@@ -6,9 +6,9 @@
 
 This is a small pet project to track down monthly transactions that I made bespoke for my parents.
 
-## Requirements and how to use
+## Requirements and how to run locally
 
-To run this project locally, you need Node.js® v10+.
+To run this project locally, you need Node.js® v10+ and a Web Browser with localStorage support.
 
 - Download or clone this repo `git clone git@github.com:AgtLucas/forgotten-past.git`
 - Install project's dependencies via [`yarn`](https://yarnpkg.com) or [`npm`](https://npmjs.com)
@@ -22,6 +22,7 @@ To run this project locally, you need Node.js® v10+.
 - Styled using CSS and some [CSS Modules](https://github.com/css-modules/css-modules)
 - Uses [Dinero.js](https://github.com/sarahdayan/dinero.js) to format currency
 - Uses [Formik](https://github.com/jaredpalmer/formik) for a better form experience
+- Uses localStorage to save your transactions
 - [Jest](https://jestjs.io) and [Enzyme](https://airbnb.io/enzyme/) for basic UI tests
 
 ## Demo
