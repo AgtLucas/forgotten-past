@@ -19,12 +19,17 @@ const App = () => {
     return transactions.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
   };
 
+  const deleteTransactionById = id => {
+    setTransactions(transactions.filter(transaction => transaction.id !== id))
+  };
+
   return (
     <main>
       <CreateTransactionForm handleSubmit={handleSubmit} />
       <TransactionsTable
         transactions={transactions}
-        getTransactionsTotalPrice={getTransactionsTotalPrice}
+        transactionsTotalPrice={getTransactionsTotalPrice()}
+        deleteTransactionById={deleteTransactionById}
       />
     </main>
   );

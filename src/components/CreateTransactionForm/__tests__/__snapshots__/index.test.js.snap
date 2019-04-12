@@ -6,6 +6,7 @@ exports[`CreateTransactionForm should render CreateTransactionForm 1`] = `
   initialValues={
     Object {
       "description": "",
+      "id": "",
       "price": "",
       "transactionType": "",
     }
