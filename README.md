@@ -1,5 +1,7 @@
 # Forgotten past
 
+![](demo.png)
+
 ## Introduction
 
 This is a small pet project to track down monthly transactions that I made bespoke for my parents.
@@ -27,3 +29,9 @@ To run this project locally, you need Node.js® v10+.
 Feel free to check the demo out [here](https://quizzical-ritchie-59c28a.netlify.com).
 
 ## LICENSE
+
+<h6 align="center">
+	<a href="LICENSE">MIT</a>
+	©
+	Lucas da Silva
+</h6>
