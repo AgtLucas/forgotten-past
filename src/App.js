@@ -16,7 +16,7 @@ const App = () => {
 
   const getTransactionsTotalPrice = () => {
     if (!transactions.length) return;
-    return `${transactions.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0)}`;
+    return transactions.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
   };
 
   return (
